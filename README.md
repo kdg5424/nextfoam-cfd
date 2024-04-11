@@ -43,13 +43,13 @@ make -j 4 all
 make install
 echo 'export PATH=$PATH:/opt/openmpi-4.0.5/bin' >> /etc/bash.bashrc
 ```
-Clone `nextfoam-solver` and move to the top directory
+Clone `nextfoam-cfd` and move to the top directory
 
 ```
 mkdir -p /opt/OpenFOAM
-git clone https://github.com/nextfoam/nextfoam-solver.git
-mv nextfoam-solver/NextFOAM-2404 /opt/OpenFOAM
-mv nextfoam-solver/ThirdParty-2404 /opt/OpenFOAM
+git clone https://github.com/nextfoam/nextfoam-cfd.git
+mv nextfoam-cfd/NextFOAM-2404 /opt/OpenFOAM
+mv nextfoam-cfd/ThirdParty-2404 /opt/OpenFOAM
 ```
 
 Setup the environment variables in the `/opt/OpenFOAM/NextFOAM-2404/etc/bashrc`
