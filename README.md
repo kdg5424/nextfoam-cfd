@@ -29,7 +29,7 @@ Install required packages for building NextFOAM-2404 in the Ubuntu Linux. Run co
 
 ```
 apt-get -y update
-apt-get -y install build-essential flex zlib1g-dev libgmp-dev libmpfr-dev
+apt-get -y install build-essential flex zlib1g-dev libgmp-dev libmpfr-dev texinfo
 ```
 
 Download `openmpi 4.0.5` source and install on `/opt/openmpi-4.0.5` directory
