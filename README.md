@@ -29,7 +29,7 @@ Install required packages for building NextFOAM-2404 in the Ubuntu Linux. Run co
 
 ```
 apt-get -y update
-apt-get -y install build-essential flex zlib1g-dev libgmp-dev libmpfr-dev texinfo
+apt-get install -y build-essential flex zlib1g-dev libgmp-dev libmpfr-dev libboost-all-dev texinfo cmake
 ```
 
 Download `openmpi 4.0.5` source and install on `/opt/openmpi-4.0.5` directory
@@ -58,6 +58,7 @@ vi /opt/OpenFOAM/NextFOAM-2404/etc/bashrc
 
 export WM_PROJECT_VERSION=2404
 projectDir="/opt/OpenFOAM/NextFOAM-$WM_PROJECT_VERSION"
+export WM_LABEL_SIZE=64
 ```
 
 **(Note)** When running `decomposePar` command, the no scotch library error is shown, download `SCOTCH-6.1.0` and set this version in the `etc/config.sh/scotch`
@@ -85,6 +86,7 @@ echo 'export WM_COMPILE_CONTROL="version=9"' >> /etc/bash.bashrc
 source /opt/OpenFOAM/NextFOAM-2404/etc/bashrc
 cd /opt/OpenFOAM/NextFOAM-2404
 export WM_NCOMPPROCS=4
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$WM_THIRD_PARTY_DIR/platforms/linux64Gcc/fftw-3.3.10/lib
 ./Allwmake
 ```
 
