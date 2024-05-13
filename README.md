@@ -58,7 +58,7 @@ vi /opt/OpenFOAM/NextFOAM-2404/etc/bashrc
 
 export WM_PROJECT_VERSION=2404
 projectDir="/opt/OpenFOAM/NextFOAM-$WM_PROJECT_VERSION"
-export WM_LABEL_SIZE=64
+export WM_LABEL_SIZE=32
 ```
 
 **(Note)** When running `decomposePar` command, the no scotch library error is shown, download `SCOTCH-6.1.0` and set this version in the `etc/config.sh/scotch`
